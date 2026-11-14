@@ -23,6 +23,7 @@ Variants 01–02 use the same fictional brand, **Ronin Grid** (an autonomous cyb
 | 02 | [Ronin Redline](variants/02-ronin-redline/) | Black void, red light-lines, moving perspective grid floor, light trails, laser "materialise" reveal. |
 | 03 | [Lune Lookbook](variants/03-lune-lookbook/) | New brand (Lune Lacquer, a nail art atelier). Soft editorial cream/berry, arched hero, filterable masonry lookbook with "Book this look". |
 | 04 | [Lune Sage & Clay](variants/04-lune-sage/) | Colour study of 03: oat cream, deep sage, terracotta prices, moss booking band. |
+| 05 | [Slow Ember](variants/05-slow-ember-ascii/) | Cosy camping game drawn entirely in ASCII. A pinned campsite scene goes from golden hour to night as you scroll, with a live fire, falling leaves and stars. |
 
 Each variant folder has a `notes.md` with its brief, what it tests, build notes and verdict.
 
@@ -68,6 +69,27 @@ Art is decided per variant: some variants are image-led, others don't need any. 
 ### Optional: generate locally with ComfyUI
 
 If you run [ComfyUI](https://github.com/comfyanonymous/ComfyUI) on your own GPU, you can connect it to Claude through an MCP server. Claude can then render a variant's `prompts.md` on your machine and save the results straight into its `assets/images/NN-slug/` folder, with no copying prompts to a hosted generator or downloading files by hand. Setup for Claude Code and Claude Desktop is in [docs/comfyui-mcp.md](docs/comfyui-mcp.md).
+
+## Optional Claude Code tooling
+
+The playground is plain HTML/CSS/JS and needs none of this to run or view. These are optional Claude Code skills, plugins and MCP servers that make building variants faster. They are not bundled here: install them yourself, then ask Claude to use them.
+
+**Project agents and skill** (included in `.claude/`)
+
+- `ux-architect`, `ui-designer`, `image-prompt-engineer` agents: page structure and the `shared/` foundation, visual direction, and image prompts.
+- `create_home_page` skill: the step-by-step procedure for a new variant, from brief to gallery card.
+
+**Design skills** (separate installs)
+
+- UI/UX Pro Max: style, palette, font-pairing and UX-guideline search for choosing a visual direction.
+- Taste / frontend-design skills: anti-"templated look" guidance for layout, type and colour.
+- GSAP skills (`gsap-core`, `gsap-scrolltrigger`, `gsap-timeline`): for variants that want scroll-driven or timeline motion. Variants stay dependency-free by default; if one loads GSAP, pin the CDN version and say so in its `notes.md`.
+- HyperFrames: HTML-to-video, handy for turning a variant into a short preview clip.
+
+**MCP servers**
+
+- **ComfyUI MCP**: local image generation into `assets/images/NN-slug/` (see [docs/comfyui-mcp.md](docs/comfyui-mcp.md)).
+- **Claude in Chrome**: open a variant in a real browser, resize, screenshot and read the console to check it at mobile and desktop widths in both themes.
 
 ## Adding a variant
 
