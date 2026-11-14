@@ -1,4 +1,4 @@
-# Home Page Playground
+# Landing Page Playground
 
 A playground for designing and comparing website home pages. Each variant is a self-contained home page (hero, sections, CTAs, imagery, theme toggle) built in plain HTML, CSS and vanilla JS. The goal is to try layouts and visual styles fast, compare them side by side, and keep the best patterns as reusable building blocks.
 

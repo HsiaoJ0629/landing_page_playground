@@ -1,4 +1,4 @@
-# Website Home Page Playground
+# Website Landing Page Playground
 
 ## Goal
 This project is a **playground for designing and building website home pages**. Each experiment is a self-contained home page variant (a hero, sections, CTAs, imagery and a theme toggle). The aim is to try layouts, visual styles and content structures quickly, compare them side by side, and keep the best patterns as reusable building blocks.
